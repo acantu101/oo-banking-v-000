@@ -41,8 +41,9 @@ attr_accessor :sender, :receiver, :amount, :status
         @satus = "rejected"
         return "Transaction rejected. Please check your account balance."
 
-      elsif  @status = "complete"
-        binding.pry
+      elsif  @status == "complete"
+
+      #  binding.pry
         @receiver.balance = @receiver.balance - @amount
         @sender.balance = @sender.balance + @amount
         @status = "reversed"
