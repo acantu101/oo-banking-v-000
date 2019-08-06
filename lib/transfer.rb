@@ -21,6 +21,7 @@ attr_accessor :sender, :receiver, :amount, :status
     end
 
     def execute_transaction
+      binding.pry
 
       if @sender.valid? == true && @status = "pending"
         @sender.balance = sender.balance - @amount
