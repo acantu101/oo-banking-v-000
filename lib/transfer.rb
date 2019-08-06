@@ -36,7 +36,7 @@ attr_accessor :sender, :receiver, :amount, :status
 
 
     def reverse_transfer
-      #binding.pry
+      binding.pry
       if @sender.valid? == false
         @satus = "rejected"
         return "Transaction rejected. Please check your account balance."
