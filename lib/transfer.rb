@@ -24,6 +24,7 @@ attr_accessor :sender, :receiver, :amount, :status
 
     #  binding.pry
       if @sender.balance < @amount
+        @status = "rejected"
         return "Transaction rejected. Please check your account balance."
       elsif @sender.valid? == true && @status != "complete"
         @sender.balance = @sender.balance - @amount
@@ -36,6 +37,7 @@ attr_accessor :sender, :receiver, :amount, :status
 
     def reverse_transfer
       if @sender.valid? == false
+        @satus = "rejected"
         return "Transaction rejected. Please check your account balance."
       elsif @sender.valid? == false && @status = "complete"
         @sender.balance = @sender.balance + @amount
