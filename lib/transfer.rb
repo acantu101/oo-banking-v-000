@@ -43,7 +43,7 @@ attr_accessor :sender, :receiver, :amount, :status
       elsif @sender.valid? == false && @status = "complete"
         @receiver.balance = @receiver.balance - @amount
         @sender.balance = @sender.balance - @amount
-      
+
       end
     end
 
