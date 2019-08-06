@@ -42,6 +42,5 @@ attr_accessor :sender, :receiver, :amount, :status
         @receiver.balance= receiver.balance - @amount
       end
     end
-  end
 
 end
